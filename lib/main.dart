@@ -1,3 +1,4 @@
+import 'package:dubai_percent/percentage_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'custoom_widget.dart';
@@ -80,40 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: <Widget>[
-            CircularPercentIndicator(
-              radius: 210.0,
-              lineWidth: 18.0,
-              percent: 0.4,
-              center: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text("34%",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                  Text("PAID")
-                ],
-              ),
-              circularStrokeCap: CircularStrokeCap.round,
-              backgroundColor: Colors.transparent,
-              maskFilter: MaskFilter.blur(BlurStyle.solid, 3),
-              linearGradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.deepPurple, Colors.deepPurpleAccent],
-              ),
-            ),
-            Container(
-              width: 225,
-              height: 225,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.withOpacity(.2),width: 35),
-                borderRadius: BorderRadius.circular(200),
-              ),
-            ),
-          ],
-        ),
+        child: PercnTageWidget(.4),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
